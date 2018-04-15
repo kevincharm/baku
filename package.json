@@ -7,9 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "webpack": "^4.5.0"
+  },
+  "engines": {
+    "ghost": ">=1.2.0"
+  },
+  "author": {
+    "name": "Kevin Tjiam",
+    "email": "kevin@kevincharm.com",
+    "url": "http://kvn.io"
   }
 }
