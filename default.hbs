@@ -2,15 +2,13 @@
 <html lang="{{lang}}">
 
 <head>
-
-    {{!-- Document Settings --}}
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> {{!-- Base Meta --}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset " built/screen.css "}}" /> {{!-- This tag outputs SEO meta+structured data and other important settings --}} {{ghost_head}}
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
+    {{ghost_head}}
 </head>
 
 <body class="{{body_class}}">
@@ -20,7 +18,8 @@
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright">
-                    <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                    <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+                </section>
                 <nav class="site-footer-nav">
                     <a href="{{@blog.url}}">Latest Posts</a>
                     {{#if @blog.facebook}}

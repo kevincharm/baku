@@ -9,7 +9,8 @@
   "keywords": [],
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "webpack": "^4.5.0"
+    "node-sass": "^4.8.3",
+    "typescript": "^2.8.1"
   },
   "engines": {
     "ghost": ">=1.2.0"
