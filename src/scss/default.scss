@@ -3,9 +3,10 @@
 @import "metrics";
 @import "index";
 @import "post";
+@import "byline";
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i');
 
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -23,7 +24,14 @@ a, a:hover, a:visited {
     text-decoration: none;
 }
 
-header.site-header, main.site-main, footer.site-footer {
+hr {
+    border: 0;
+    background-color: var(--grey-10);
+    height: 2px;
+    width: 100%;
+}
+
+body > * {
     max-width: var(--page-width);
     margin: 0 auto;
 }

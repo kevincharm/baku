@@ -1,6 +1,28 @@
-article {
+main.site-main > div > article.post-article {
+    margin-bottom: var(--margin-lg);
+}
+
+article.post-article {
+    > * {
+        margin-bottom: var(--margin-lg);
+    }
+
     p {
         line-height: 1.5;
         font-size: 21px;
+    }
+}
+
+aside.related-posts {
+    display: flex;
+
+    > div {
+        flex-basis: 50%;
+    }
+
+    > div > .post-descriptor {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
     }
 }
