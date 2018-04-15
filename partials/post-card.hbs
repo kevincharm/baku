@@ -1,33 +1,20 @@
 <article class="post-card">
     <div>
         <a class="post-card-content-link" href="{{url}}">
-            <header class="post-card-header">
-                <h2 class="post-card-title">{{title}}</h2>
-            </header>
+            <h2 class="post-card-title">{{title}}</h2>
         </a>
-        <span class="reading-time">{{reading_time}}</span>
-        {{#if primary_tag}}
-            <span class="post-card-tags">{{primary_tag.name}}</span>
-        {{/if}}
-        <footer>
-            <ul>
-                {{#foreach authors}}
-                <li>
-                    {{#if profile_image}}
-                        <a href="{{url}}" class="author-profile-image">
-                            <img src="{{profile_image}}" alt="{{name}}" />
+        <div>
+            <span>{{date published_at format="YYYY-MM-DD"}}</span>
+            {{#if tags}}
+                <span>&rsaquo;</span>
+                {{#foreach tags limit="3"}}
+                    <span class="post-card-tags">
+                        <a href="{{url}}">
+                            {{name}}
                         </a>
-                    {{else}}
-                        <a href="{{url}}" class="author-profile-image">
-                            {{> "icons/avatar"}}
-                        </a>
-                    {{/if}}
-                    <div class="author-name">
-                        {{name}}
-                    </div>
-                </li>
+                    </span>
                 {{/foreach}}
-            </ul>
-        </footer>
+            {{/if}}
+        </div>
     </div>
 </article>
