@@ -11,6 +11,10 @@ article.post-article {
         line-height: 1.5;
         font-size: 21px;
     }
+
+    img, video {
+        max-width: 100%;
+    }
 }
 
 aside.related-posts {
