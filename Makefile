@@ -1,10 +1,20 @@
+CMD_SASS=yarn node-sass --source-map=true --output-style=compressed \
+	--include-path=./node_modules \
+	./src/scss/default.scss ./assets/css/default.css
+
+CMD_TSC=yarn tsc
+
 default: build
 
 build: prepare
-	yarn node-sass --source-map=true --output-style=compressed \
-		--recursive --include-path=./node_modules \
-		--output ./assets/css ./src/scss
-	yarn tsc
+	$(CMD_SASS)
+	$(CMD_TSC)
+
+watch-sass:
+	$(CMD_SASS) --watch
+
+watch-tsc:
+	$(CMD_SASS) --watch
 
 .PHONY: install prepare clean
 
@@ -15,4 +25,5 @@ prepare:
 	mkdir -p ./assets/css ./assets/js
 
 clean:
-	find . -type f -name '*.js' -name '*.css' -delete
+	find ./assets/js -type f -name '*.js*' -delete
+	find ./assets/css -type f -name '*.css*' -delete
