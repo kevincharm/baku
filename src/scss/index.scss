@@ -1,3 +1,11 @@
-header {
-    height: 100px;
+header.site-header > div {
+    &> * {
+        margin: 0 var(--margin-md);
+    }
+}
+
+main.site-main > div {
+    &> * {
+        margin: 0 var(--margin-md);
+    }
 }
