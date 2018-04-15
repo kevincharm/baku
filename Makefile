@@ -1,7 +1,9 @@
 default: build
 
 build: prepare
-	yarn node-sass -r ./src/scss --output ./assets/css
+	yarn node-sass --source-map=true --output-style=compressed \
+		--recursive --include-path=./node_modules \
+		--output ./assets/css ./src/scss
 	yarn tsc
 
 .PHONY: install prepare clean

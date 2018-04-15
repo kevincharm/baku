@@ -19,5 +19,8 @@
     "name": "Kevin Tjiam",
     "email": "kevin@kevincharm.com",
     "url": "http://kvn.io"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }
