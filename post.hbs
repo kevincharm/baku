@@ -31,7 +31,8 @@
                 {{content}}
             </section>
 
-            {{!-- Email subscribe form at the bottom of the page --}} {{#if @labs.subscribers}}
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers}}
             <section class="subscribe-form">
                 <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
                 <p>Get the latest posts delivered right to your inbox</p>
@@ -40,11 +41,13 @@
             {{/if}}
 
             <footer class="post-full-footer">
-
                 {{!-- There are two options for how we display the byline/author-info. If the post has more than one author, we load a specific
-                template from includes/byline-multiple.hbs, otherwise, we just use the default byline. --}} {{#has author="count:>1"}}
-                {{> "byline-multiple"}} {{else}} {{> "byline-single"}} {{/has}}
-
+                template from includes/byline-multiple.hbs, otherwise, we just use the default byline. --}}
+                {{#has author="count:>1"}}
+                    {{> "byline-multiple"}}
+                {{else}}
+                    {{> "byline-single"}}
+                {{/has}}
             </footer>
 
             {{!--
