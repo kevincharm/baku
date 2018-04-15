@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{lang}}">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
-    {{ghost_head}}
-</head>
-
-<body class="{{body_class}}">
-    {{{body}}}
-    <footer class="site-footer outer">
-        <div class="site-footer-content inner">
-            <section class="copyright">
-                <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
-            </section>
-            <nav class="site-footer-nav">
-                <a href="{{@blog.url}}">Latest Posts</a>
-                {{#if @blog.facebook}}
-                <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}} {{#if @blog.twitter}}
-                <a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-                <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-            </nav>
-        </div>
-    </footer>
-    {{{block "scripts"}}}
-    {{ghost_foot}}
-</body>
-
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{{meta_title}}</title>
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
+        {{ghost_head}}
+    </head>
+    <body class="{{body_class}}">
+        {{{body}}}
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright">
+                    Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>
+                </section>
+                <nav class="site-footer-nav">
+                    <a href="{{@blog.url}}">Home</a>
+                    {{#if @blog.facebook}}
+                    <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}} {{#if @blog.twitter}}
+                    <a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+        {{{block "scripts"}}}
+        {{ghost_foot}}
+    </body>
 </html>
